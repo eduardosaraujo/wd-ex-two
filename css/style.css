@@ -1,0 +1,506 @@
+* {
+    -webkit-font-feature-settings: "liga"on, "calt"on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'JetBrains Mono';
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono Extra Light';
+    src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-ExtraLight.woff2') format('woff2'),
+        url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono Thin';
+    src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Thin.woff2') format('woff2'),
+        url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono Bold';
+    src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Bold.woff2') format('woff2'),
+        url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Krungthep';
+    src: url('../assets/Krungthep.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SolitasSlab';
+    src: url('../assets/SolitasSlab.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AbrilFatface';
+    src: url('../assets/AbrilFatface.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Excisus';
+    src: url('../assets/Excisus.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#home {
+    overflow-x: hidden;
+    min-width: 100vw;
+    min-height: 94vh;
+    width: 100vw;
+    height: 94vh;
+}
+
+@media (max-width: 1920px) {
+    #home {
+        overflow-x: hidden;
+        min-width: 100vw;
+        min-height: 91vh;
+        width: 100vw;
+        height: 91vh;
+    }
+}
+
+.container {
+    border-bottom: 8px dashed #000;
+}
+
+.paragraph {
+    font-family: SolitasSlab;
+    font-size: 1.5em;
+    text-align: justify;
+    text-justify: inter-character;
+    hyphens: auto;
+}
+
+.paragraph::first-letter {
+    float: left;
+    font-size: 5rem;
+    margin: 0.15em 0.1em 0em 0;
+    -webkit-margin-before: -0.2em;
+    -webkit-margin-after: -0.4em;
+    color: #56BAE9;
+}
+
+.secondary-paragraph {
+    font-family: SolitasSlab;
+    font-size: 1.55em;
+    text-align: justify;
+    text-justify: inter-character;
+    hyphens: auto;
+}
+
+#rules {
+    overflow-x: hidden;
+}
+
+#rules ul li {
+    width: calc(98vw/13);
+    height: 90vh;
+    background: white;
+    line-height: 3.5vw;
+    color: #56BAE9;
+}
+
+#rules ul li a {
+    font-size: 8em;
+    text-align: right;
+    width: 800px;
+    -webkit-transform: translate(0%, 0%) rotate(-90deg);
+    -moz-transform: translate(-50%, 50%) rotate(-90deg);
+    -ms-transform: translate(-50%, 50%) rotate(-90deg);
+    -o-transform: translate(-50%, 50%)rotate(-90deg);
+    transform: translate(-50%, 300%) rotate(-90deg);
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    line-height: 0.9em;
+    color: #56BAE9;
+}
+
+.rule-title {
+    font-family: JetBrains Mono Bold;
+    color: black;
+}
+
+.rule-title-num {
+    font-family: JetBrains Mono Extra Light;
+}
+
+#rules ul li a:hover .rule-title {
+    color: #56BAE9;
+}
+
+#rules ul li a:hover {
+    color: #000000;
+}
+
+#rules ul li a:active:focus {
+    color: #56BAE9;
+}
+
+#rule-number {
+    width: 25%;
+    /* height: 90vh; */
+    pointer-events: none;
+    left: 15px;
+    bottom: 45px;
+    z-index: 100;
+    position: absolute;
+}
+
+.rule-name-dot {
+    font-size: 1em;
+    color: #56BAE9;
+    line-height: 1em;
+    font-family: Krungthep;
+    height: 93vh;
+}
+
+.rule-name-because {
+    font-size: 3em;
+    color: black;
+    line-height: 1em;
+    font-family: JetBrains Mono Thin;
+}
+
+.rule-name {
+    font-size: 6em;
+    color: black;
+    line-height: 1em;
+    font-family: AbrilFatface;
+}
+
+.rule-description {
+    font-size: 1.5em;
+    color: black;
+    width: 40vw;
+    text-align: justify;
+    font-family: SolitasSlab;
+    padding-top: 3em;
+}
+
+.content {
+    position: absolute;
+    top: 2.8em;
+    left: 32.5vw;
+}
+
+.link-back {
+    text-decoration: none;
+}
+
+.nav-home {
+    left: 20px;
+    top: 20px;
+    font-size: 1.25em;
+    color: #56BAE9;
+    text-decoration: none;
+    position: absolute;
+}
+
+.nav-previous {
+    z-index: 110;
+    left: 20px;
+    top: 50%;
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    background-color: white;
+}
+
+.nav-previous:hover {
+    color: #56BAE9;
+}
+
+.nav-next {
+    z-index: 110;
+    right: 20px;
+    top: 50%;
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    background-color: white;
+}
+
+.nav-next:hover {
+    color: #56BAE9;
+}
+
+.description-link {
+    color: #56BAE9;
+    font-family: SolitasSlab;
+}
+
+.description-link:hover {
+    background-color: #56BAE9;
+    color: #fff;
+    font-family: SolitasSlab;
+}
+
+.pattern {
+    z-index: -1;
+    position: absolute;
+    top: 40vh;
+    left: 0px;
+    animation-name: patternAnimation;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes patternAnimation {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: -40vw;
+    }
+
+    100% {
+        left: 0px
+    }
+}
+
+.magazine:hover {
+    opacity: 0.5;
+}
+
+.banner {
+    animation-name: bannerAnimation;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    height: 200px;
+    z-index: 200;
+    background-repeat: repeat-x;
+    background-position: right center;
+}
+
+@keyframes bannerAnimation {
+    0% {
+        right: 0px
+    }
+
+    50% {
+        right: 40vw;
+    }
+
+    100% {
+        right: 0px
+    }
+}
+
+.bannerText {
+    z-index: 200;
+    position: relative;
+    animation-name: bannerTextAnimation;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-top: -200px;
+    background-repeat: repeat-x;
+    background-position: left center;
+}
+
+@keyframes bannerTextAnimation {
+    0% {
+        left: -40vw
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: -40vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    body {
+        background: white;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    
+    #home {
+        overflow-x: hidden;
+        min-width: 100vw;
+        min-height: 94vh;
+        width: 100vw;
+        height: 94vh;
+    }
+
+    #rules {
+        overflow-x: hidden;
+    }
+
+    #rules ul {
+        /* display: flex; */
+        display: grid;
+    }
+
+    #rules ul li {
+        /* display: grid; */
+        width: auto;
+        height: auto;
+        /* line-height: 3.5vw; */
+        color: #56BAE9;
+        /* background-color: red; */
+    }
+
+    #rules ul li a {
+        font-size: 4em;
+        text-align: left;
+        /* width: 800px; */
+        -webkit-transform: translate(50%, -50%);
+        -moz-transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+        -o-transform: translate(50%, -50%);
+        transform: translate(0%, 0%);
+        -webkit-transform-origin: -50% 0%;
+        -moz-transform-origin: -50% 0%;
+        -ms-transform-origin: -50% 0%;
+        -o-transform-origin: -50% 0%;
+        transform-origin: 0% 0%;
+        line-height: 0.9em;
+        color: #56BAE9;
+    }
+
+    .rule-title {
+        font-family: JetBrains Mono Bold;
+        color: black;
+    }
+
+    .rule-title-num {
+        font-family: JetBrains Mono Extra Light;
+    }
+
+    #rules ul li a:hover .rule-title {
+        color: #56BAE9;
+    }
+
+    #rules ul li a:hover {
+        color: #000000;
+    }
+
+    #rules ul li a:active:focus {
+        color: #56BAE9;
+    }
+
+    .content {
+        /* position: absolute; */
+        top: 10em;
+        left: 20vw;
+    }
+
+    .nav-previous {
+        z-index: 110;
+        left: 20px;
+        top: 100px;
+        font-size: 2em;
+        color: black;
+        text-decoration: none;
+        position: absolute;
+        background-color: white;
+    }
+    
+    .nav-previous:hover {
+        color: #56BAE9;
+    }
+    
+    .nav-next {
+        z-index: 110;
+        right: 20px;
+        top: 100px;
+        font-size: 2em;
+        color: black;
+        text-decoration: none;
+        position: absolute;
+        background-color: white;
+    }
+    
+    .nav-next:hover {
+        color: #56BAE9;
+    }
+
+    #rule-number {
+        height: 10vh;
+        pointer-events: none;
+        left: 15px;
+        top: 10.5em;
+        z-index: 100;
+        position: absolute;
+    }
+
+    .rule-name-dot {
+        font-size: 1em;
+        color: #56BAE9;
+        line-height: 1em;
+        font-family: Krungthep;
+    }
+
+    .rule-name-because {
+        font-size: 3em;
+        color: black;
+        line-height: 1em;
+        font-family: JetBrains Mono Thin;
+    }
+
+    .rule-name {
+        font-size: 6em;
+        color: black;
+        line-height: 1em;
+        font-family: AbrilFatface;
+    }
+
+    .rule-description {
+        font-size: 1.8em;
+        color: black;
+        width: 60vw;
+        text-align: justify;
+        font-family: SolitasSlab;
+        padding-top: 1em;
+        padding-bottom: 3em;
+    }
+
+    .pattern {
+        z-index: -1;
+        position: fixed;
+        /* height: 10vh; */
+        top: 95vh;
+        left: 0px;
+        animation-name: none;
+    }
+    
+
+}
